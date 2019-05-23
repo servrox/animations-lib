@@ -1,0 +1,15 @@
+<div *ngFor="let bubble of bubbles.value" class="bubbles" [ngStyle]="{
+    'box-shadow': bubble.color ? '0 0 12.5px ' + bubble.color + ' inset' : null,
+    'background-image': bubble.logo ? 'url(' + bubble.logo + ')' : null
+  }" [@trigger]="{
+    value: bubble.move ? 'left' : 'right',
+    params: {
+      startTop: bubble.startTop,
+      startLeft: bubble.startLeft,
+      newTop: bubble.newTop,
+      newLeft: bubble.newLeft,
+      timeStart: bubble.timeStart,
+      timeBack: bubble.timeBack
+    }
+  }" (@trigger.done)="bubble.onAnimationEvent($event)"></div>
+<!-- [ngStyle]="{ background: bubble.color ? 'radial-gradient( ellipse at center, rgba(254, 252, 234, 1) 0%, ' + bubble.color + ' 100% )' : null }" -->

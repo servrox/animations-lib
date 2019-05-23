@@ -1,0 +1,21 @@
+.bubbles {
+  background: rgba(255, 255, 255, 0.1);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0 0 12.5px lightskyblue inset;
+  // background-image: url('https://avatars3.githubusercontent.com/u/49032343');
+  background-size: 75px 75px;
+}
+
+.bubbles:before {
+  background: rgba(255, 255, 255, 0.2);
+  content: '';
+  width: 30px;
+  height: 14px;
+  position: absolute;
+  margin: 5px 0 0 12.5px;
+  border-radius: 50%;
+  transform: rotate(-20deg);
+}

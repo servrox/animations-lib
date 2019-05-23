@@ -1,0 +1,7 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [true, "attribute", "ssAniLib", "camelCase"],
+    "component-selector": [true, "element", "ss-ani-lib", "kebab-case"]
+  }
+}
