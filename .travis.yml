@@ -1,0 +1,28 @@
+language: node_js
+node_js:
+  - stable
+
+branches:
+  only:
+    - master
+    - develop
+
+install:
+  - npm install -g @angular/cli
+
+script:
+  - mkdir animations-lib
+  - mv *.json animations-lib
+  - mv README.md animations-lib
+  - mv jest.config.js animations-lib
+  - mv src animations-lib
+  - ng new build-lib-app --createApplication=false --routing=false --style=scss
+  - ng generate library animations-lib
+  - rm -rf build-lib\projects\animations-lib\
+  - mv animations-lib\ build-lib\projects\
+  - cd build-lib-app
+  - ng build animations-lib
+
+after_script:
+  - cd dist\libs\animations-lib\
+  - npm publish --access public
