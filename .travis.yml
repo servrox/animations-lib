@@ -19,10 +19,10 @@ script:
   - ng new build-lib-app --createApplication=false --routing=false --style=scss
   - cd build-lib-app
   - ng generate library animations-lib
-  - rm -rf projects\animations-lib\
-  - mv ..\animations-lib\ build-lib\projects\
+  - rm -rf projects/animations-lib/
+  - mv ../animations-lib/ build-lib/projects/
   - ng build animations-lib
 
 after_script:
-  - cd dist\libs\animations-lib\
+  - cd dist/libs/animations-lib/
   - npm publish --access public
