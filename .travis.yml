@@ -20,7 +20,7 @@ script:
   - cd build-lib-app
   - ng generate library animations-lib
   - rm -rf projects/animations-lib/
-  - mv ../animations-lib/ build-lib/projects/
+  - mv ../animations-lib/ projects/
   - ng build animations-lib
 
 after_script:
