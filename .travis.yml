@@ -17,10 +17,10 @@ script:
   - mv jest.config.js animations-lib
   - mv src animations-lib
   - ng new build-lib-app --createApplication=false --routing=false --style=scss
-  - ng generate library animations-lib
-  - rm -rf build-lib\projects\animations-lib\
-  - mv animations-lib\ build-lib\projects\
   - cd build-lib-app
+  - ng generate library animations-lib
+  - rm -rf projects\animations-lib\
+  - mv ..\animations-lib\ build-lib\projects\
   - ng build animations-lib
 
 after_script:

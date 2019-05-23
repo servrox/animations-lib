@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/servrox/animations-lib.svg?branch=master)](https://travis-ci.org/servrox/animations-lib)
+
 # servrox's AnimationsLib
 
 Fancy angular library containing easy to use and customizable animation elements.
@@ -25,7 +27,7 @@ import { OverlayModule } from '@servrox/animations-lib';
 export class AppModule {}
 ```
 
-### 2. Use in template (every input variable is optional)
+### 2. Use in template (e.g. OverlayModule -> every input variable is optional)
 
 ```
 <ss-ani-lib-overlay
@@ -41,7 +43,7 @@ or
 <ss-ani-lib-overlay></ss-ani-lib-overlay>
 ```
 
-Defaults:
+Defaults for OverlayModule:
 
 ```
 count: number = 20,
