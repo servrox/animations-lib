@@ -5,11 +5,19 @@
 
 Fancy angular library containing easy to use and customizable animation elements.
 
+_Info: See travis ci script to know how to build this lib-only-repo locally._
+
 ![Live Demo](http://g.recordit.co/H64YQuYuQs.gif)
 
 ## Getting Started
 
-### 1. Import module (e.g. OverlayModule)
+### 1. Install
+
+```
+npm i @servrox/animations-lib
+```
+
+### 2. Import module (e.g. OverlayModule)
 
 ```
 import { BrowserModule } from '@angular/platform-browser';
@@ -28,7 +36,7 @@ import { OverlayModule } from '@servrox/animations-lib';
 export class AppModule {}
 ```
 
-### 2. Use in template (e.g. OverlayModule -> every input variable is optional)
+### 3. Use in template (e.g. OverlayModule -> every input variable is optional)
 
 ```
 <ss-ani-lib-overlay
